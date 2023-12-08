@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Consignar">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#E91E63"
+        android:fontFamily="casual"
+        android:text="¡Bienvenido a la opción Consignar!"
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="319dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo">
+
+        <RadioButton
+            android:id="@+id/rbSaldo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="eleccion"
+            android:text="Consultar salgo"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbConsignar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="eleccion"
+            android:text="Consignar dinero"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/rbRetirar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="eleccion"
+            android:text="Retirar dinero"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewSaldo"
+        android:layout_width="314dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="295dp"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+    <EditText
+        android:id="@+id/editTextNumberRetirar"
+        android:layout_width="269dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="-55dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Digite el valor a retirar"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberConsignar" />
+
+    <EditText
+        android:id="@+id/editTextNumberConsignar"
+        android:layout_width="292dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="-55dp"
+        android:layout_marginTop="356dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Digite el valor a consignar"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+    <Button
+        android:id="@+id/buttonGuardarConsignar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="buttonGuardarConsignar"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberRetirar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
